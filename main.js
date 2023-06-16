@@ -3,7 +3,7 @@ const quizData = [
         question: 'Какая команда отвечает за меню банды?',
         a: '/bmenu',
         b: '/fmenu',
-        c: '/pmenu',
+        c: '/qmenu',
         d: '/dmenu',
         correct: '/fmenu'
     }, {
@@ -11,7 +11,7 @@ const quizData = [
         a: '/c 60',
         b: '/b 60',
         c: '/c 50',
-        d: '/d 50',
+        d: '/d 99',
         correct: '/c 60'
     }, {
         question: 'Какая команда отвечает за меню машины?',
