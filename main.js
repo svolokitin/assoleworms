@@ -69,7 +69,7 @@ function checkResult() {
         quiz.innerHTML = `<h3 class="result">Поздравляем, вы прошли тест!<br>${countTrueAns} правельных ответов из ${quizData.length}</h3>`;
     }
     else {
-        quiz.innerHTML = `<h3 class="result">Вы провалили тест!!!<br>${countTrueAns} правельных ответов из ${quizData.length}</h3>`;
+        quiz.innerHTML = `<h3 class="result">Вы провалили тест!!!<br>${countTrueAns} правильных ответов из ${quizData.length}</h3>`;
     }
 }
 
