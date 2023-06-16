@@ -20,9 +20,24 @@ const quizData = [
         c: '/car',
         d: '/jopa',
         correct: '/car'
+    }, {
+        question: 'Какая команда отвечает за чат банды?',
+        a: '/fm',
+        b: '/rr',
+        c: '/fc',
+        d: '/bm',
+        correct: '/fm'
+    }, {
+        question: 'Какая команда отвечает за передачу предмета другому игроку?',
+        a: '/drop_item',
+        b: '/give_item',
+        c: '/take_item',
+        d: '/give_jopa',
+        correct: '/give_item'
     }
 ]
 
+const quiz = document.getElementById('quizContainer');
 const questionEl = document.getElementById('question');
 const a_text = document.getElementById('a_text');
 const b_text = document.getElementById('b_text');
@@ -47,6 +62,17 @@ function loadQuiz() {
     d_text.innerText = currentQuizData.d;
 }
 
+function checkResult() {
+    const percent = countTrueAns / (quizData.length / 100);
+
+    if (percent > 75) {
+        quiz.innerHTML = `<h3 class="result">Поздравляем, вы прошли тест!<br>${countTrueAns} правельных ответов из ${quizData.length}</h3>`;
+    }
+    else {
+        quiz.innerHTML = `<h3 class="result">Вы провалили тест!!!<br>${countTrueAns} правельных ответов из ${quizData.length}</h3>`;
+    }
+}
+
 form.addEventListener('submit', addQuiz);
 
 function addQuiz(event) {
@@ -56,33 +82,29 @@ function addQuiz(event) {
     const currentQuizData = quizData[currentQuiz];
     currentQuiz++;
 
-    if (currentQuiz <= quizData.length) {
-        if (fildText == currentQuizData.correct) {
-            try {
-                loadQuiz();
-                countTrueAns++;
-            }
-            catch (err) {
-                alert('Finish');
-                countTrueAns++;
-            }    
+    if (currentQuiz < quizData.length) {
+        loadQuiz();
+        if (fildText === currentQuizData.correct) {
+            countTrueAns++;
+            console.log(countTrueAns, countFalseAns);
         }
         else {
-            try {
-                loadQuiz();
-                countFalseAns++;
-            }
-            catch (err) {
-                alert('Finish');
-                countFalseAns++;
-            }
+            countFalseAns++;
+            console.log(countTrueAns, countFalseAns);
         }
-    } 
+    }
     else {
-        alert('Finish');
+        if (fildText === currentQuizData.correct) {
+            countTrueAns++;
+            console.log(countTrueAns, countFalseAns);
+        }
+        else {
+            countFalseAns++;
+            console.log(countTrueAns, countFalseAns);
+        }
+        checkResult(countTrueAns);
     }
 
     fildInput.value = "";
-
 }
 
