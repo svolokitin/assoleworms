@@ -34,6 +34,13 @@ const quizData = [
         c: '/take_item',
         d: '/give_jopa',
         correct: '/give_item'
+    }, {
+        question: 'Какая команда отвечает за вызов телефона?',
+        a: '/iphone',
+        b: '/my_phone',
+        c: '/phone',
+        d: '/zalupa',
+        correct: '/phone'
     }
 ]
 
