@@ -40,6 +40,14 @@ const quizData = [
         d: '/give_jopa',
         correct: '/give_item'
     }, {
+	difficult: 'Сложность: как два пальца',
+	question: 'Какая команда отвечает за вызов телефона?',
+	a: '/iphone',
+	b: '/phone',
+	c: '/mobile',
+	d: '/take_phone',
+	correct: '/phone'
+    }, {
         difficult: 'Сложность: что-то знаешь',
         question: 'Сколько максимум игроков может быть на захвате бизака?',
         a: 'Формат ответа: число',
