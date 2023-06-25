@@ -3,7 +3,7 @@
 }
 
 body {
-	background-color: green;
+	background-color: skyblue;
 	display: flex;
 	align-items: center;
 	justify-content: center;
@@ -11,13 +11,14 @@ body {
 }
 
 .quiz-body {
-	border: 3px solid;
+	border: 2px solid;
 	border-radius: 6px;
-	background-image: url('hentaiGirl.jpg');
+	background-image: url('../img/hentaiGirl.jpg');
 	background-repeat: no-repeat;
 	background-size: 100% 100%;
 	font-family: sans-serif;
 	padding: 1rem;
+	box-shadow: 0 0 10px 3px rgba(100, 100, 100, 100);
 }
 
 .submit-button {
@@ -25,9 +26,10 @@ body {
 }
 
 .result {
-	border: 3px solid;
+	border: 2px solid;
 	border-radius: 6px;
 	font-family: sans-serif;
 	background-color: white;
 	padding: 1rem;
+	box-shadow: 0 0 10px 3px rgba(100, 100, 100, 100);
 }

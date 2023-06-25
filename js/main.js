@@ -1,5 +1,6 @@
 const quizData = [
     {
+        difficult: 'Сложность: как два пальца',
         question: 'Какая команда отвечает за меню банды?',
         a: '/bmenu',
         b: '/fmenu',
@@ -7,6 +8,7 @@ const quizData = [
         d: '/dmenu',
         correct: '/fmenu'
     }, {
+        difficult: 'Сложность: как два пальца',
         question: 'Какая команда отвечает за колово часов?',
         a: '/c 60',
         b: '/b 60',
@@ -14,6 +16,7 @@ const quizData = [
         d: '/d 99',
         correct: '/c 60'
     }, {
+        difficult: 'Сложность: как два пальца',
         question: 'Какая команда отвечает за меню машины?',
         a: '/auto',
         b: '/mobile',
@@ -21,6 +24,7 @@ const quizData = [
         d: '/jopa',
         correct: '/car'
     }, {
+        difficult: 'Сложность: как два пальца',
         question: 'Какая команда отвечает за чат банды?',
         a: '/fm',
         b: '/rr',
@@ -28,6 +32,7 @@ const quizData = [
         d: '/bm',
         correct: '/fm'
     }, {
+        difficult: 'Сложность: как два пальца',
         question: 'Какая команда отвечает за передачу предмета другому игроку?',
         a: '/drop_item',
         b: '/give_item',
@@ -35,15 +40,33 @@ const quizData = [
         d: '/give_jopa',
         correct: '/give_item'
     }, {
-        question: 'Какая команда отвечает за вызов телефона?',
-        a: '/iphone',
-        b: '/my_phone',
-        c: '/phone',
-        d: '/zalupa',
-        correct: '/phone'
+	difficult: 'Сложность: как два пальца',
+	question: 'Какая команда отвечает за вызов телефона?',
+	a: '/iphone',
+	b: '/phone',
+	c: '/mobile',
+	d: '/take_phone',
+	correct: '/phone'
+    }, {
+        difficult: 'Сложность: что-то знаешь',
+        question: 'Сколько максимум игроков может быть на захвате бизака?',
+        a: 'Формат ответа: число',
+        b: '',
+        c: '',
+        d: '',
+        correct: '10'
+    }, {
+        difficult: 'Сложность: что-то знаешь',
+        question: 'До какой минуты нельзя стрелять при капте?',
+        a: 'Формат ответа: число',
+        b: '',
+        c: '',
+        d: '',
+        correct: '5'
     }
 ]
 
+const diff = document.getElementById('diff');
 const quiz = document.getElementById('quizContainer');
 const questionEl = document.getElementById('question');
 const a_text = document.getElementById('a_text');
@@ -62,6 +85,7 @@ loadQuiz();
 
 function loadQuiz() {
     const currentQuizData = quizData[currentQuiz];
+    diff.innerText = currentQuizData.difficult;
     questionEl.innerText = currentQuizData.question;
     a_text.innerText = currentQuizData.a;
     b_text.innerText = currentQuizData.b;
