@@ -1,13 +1,15 @@
-const mysql = require('mysql2');
+import {Host, User, DB, Password} from "./config.js";
+import mysql2 from 'mysql2'
+
 
 const sql = 'INSERT INTO members_band VALUE(?,?,?,?)';
-const member_band = [4, 1, 'Jorik_Shtuk', ''];
+const member_band = [3, 1, 'Dasha_Pika', 'dashusex@gmail.com'];
 
-const conn = mysql.createConnection({
-	host: "localhost",
-	user: "root",
-	database: "assoleworms",
-	password: "fynjyikzgbr35000!BOO"
+const conn = mysql2.createConnection({
+	host: Host,
+	user: User,
+	database: DB,
+	password: Password
 });
 
 //connect to data base
@@ -21,14 +23,14 @@ conn.connect( function (err) {
 });
 
 //added data to table
-conn.execute(sql, member_band, function (err, result) {
+/*conn.execute(sql, member_band, function (err, result) {
 	if (err) {
 		console.log(err)
 	}
 	else {
 		console.log('Member band added');
 	}
-});
+});*/
 
 //show data from table
 conn.execute('SELECT * FROM members_band;', function (err, result) {
