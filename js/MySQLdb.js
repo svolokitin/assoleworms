@@ -4,7 +4,7 @@ import mysql2 from 'mysql2'
 const sql = 'INSERT INTO members_band VALUE(?,?,?,?)';
 const member_band = [3, 1, 'Dasha_Pika', 'dashusex@gmail.com'];
 
-const conn = mysql2.createConnection({
+const connection = mysql2.createConnection({
 	host: Host,
 	user: User,
 	database: DB,
@@ -22,7 +22,7 @@ connection.connect( function (err) {
 });
 
 //added data to table
-/*conn.execute(sql, member_band, function (err, result) {
+/*connection.execute(sql, member_band, function (err, result) {
 	if (err) {
 		console.log(err)
 	}
@@ -33,7 +33,10 @@ connection.connect( function (err) {
 
 //show data from table
 connection.execute('SELECT * FROM members_band;', function (err, result) {
-	console.log(err);
-	console.log(result);
+	try {
+		console.log(result);
+	} catch (e) {
+		console.log(message.e);
+	}
 });
 
