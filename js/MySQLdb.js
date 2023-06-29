@@ -1,15 +1,14 @@
-import mysql2 from 'mysql2';
-import express from 'express';
+import {Host, User, DB, Password} from "./config.js";
+import mysql2 from 'mysql2'
 
 const sql = 'INSERT INTO members_band VALUE(?,?,?,?)';
-const member_band = [4, 1, 'Jorik_Shtuk', ''];
-const server = express();
+const member_band = [3, 1, 'Dasha_Pika', 'dashusex@gmail.com'];
 
-const connection = mysql2.createConnection({
-	host: "185.250.205.64",
-	user: "DanteMachine_1",
-	database: "assoleworms",
-	password: "fynjyikzgbr35000!BOO"
+const conn = mysql2.createConnection({
+	host: Host,
+	user: User,
+	database: DB,
+	password: Password
 });
 
 //connect to data base

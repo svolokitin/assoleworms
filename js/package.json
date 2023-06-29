@@ -1,0 +1,17 @@
+{
+  "name": "assoleworms",
+  "version": "1.0.0",
+  "description": "Site",
+  "main": "MySQLdb.js",
+  "type": "module",
+  "scripts": {
+    "start": "node MySQLdb.js",
+    "dev": "nodemon MySQLdb.js"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "mysql2": "^3.4.2",
+    "nodemon": "^2.0.22"
+  }
+}
