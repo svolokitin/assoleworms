@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link type="text/css" rel="stylesheet" href="./addQuiz.css">
+    <link rel="icon" type="image/x-icon" href="../../img/favicon.png">
+    <title>Add quiz</title>
+</head>
+<body>
+    <div class="nav-bar">
+        <ul>
+            <li class="center-li">Добавление вопросов</li>
+            <li ><a id="back" href="/main/admin-window/">Назад</a></li>
+            <li><a id="account" href="">Аккаунт</a></li>
+        </ul>
+    </div>    
+    <form id="form">
+        <ul>
+            <li><input id="diff" type="" name="" placeholder="Введите сложность" required ></li>
+            <li><textarea id="question" placeholder="Введите вопрос"></textarea></li>
+            <li><input id="a" type="" name="" placeholder="Введите вариант a" required ></li>
+            <li><input id="b" type="" name="" placeholder="Введите вариант b" required ></li>
+            <li><input id="c" type="" name="" placeholder="Введите вариант c" required ></li>
+            <li><input id="d" type="" name="" placeholder="Введите вариант d" required ></li>
+            <li><input id="correct" type="" name="" placeholder="Введите правильный ответ" required ></li>
+            <li><button class="form_button" type="submit" name="">Подтвердить</button></li>
+        </ul>
+    </form>
+
+
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script type="module" src="./addQuiz.js"></script>
+</body>
+</html>

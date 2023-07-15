@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link type="text/css" rel="stylesheet" href="./admin-window.css">
+    <link rel="icon" type="image/x-icon" href="../img/favicon.png">
+    <title>Admin panel</title>
+</head>
+<body>
+    <div class="nav-bar">
+        <form id="form">
+            <ul>
+                <li class="center-li">Коморка админа</li>
+                <li style="display:hide"><a id="logout" href="/main">Выйти</a></li>
+                <li><a id="account" href="">Аккаунт</a></li>
+             </ul>
+        </form>
+    </div>
+    <div class="main-container">
+        <div class="buttons">
+            <ul>
+                <li><button id="button1">Добавить вопрос</button></li>
+                <li><button id="button2">Изменить вопрос</button></li>
+                <li><button id="button3">Удалить вопрос</button></li>
+                <li><button id="button4">Посмотреть вопросы</button></li>
+                <li><button id="button5">Список пользователей</button></li>
+            </ul>
+        </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script type="module" src="./admin-window.js"></script>
+</body>
+</html>

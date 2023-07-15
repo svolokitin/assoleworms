@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="ru">
+    <head>
+        <title>???</title>
+        <link type="text/css" rel="stylesheet" href="./styles.css">
+        <link rel="icon" type="image/x-icon" href="./img/favicon.png">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta charset="UTF-8">
+    </head>
+    <body>
+        <a class="back" href="/main">ГЛАВНАЯ</a>
+        <div class="quiz-container" id="quizContainer">
+            <div class="quiz-body">
+                <h4 id="diff">Сложность: как два пальца</h4>
+                <h3 id="question">Какая команда отвечает за меню банды?</h3><br>
+                <lable id="a_text" class="variant">/bmenu</lable>
+                <br>
+                <lable id="b_text" class="variant">/fmenu</lable>
+                <br>
+                <lable id="c_text" class="variant">/qmenu</lable>
+                <br>
+                <lable id="d_text" class="variant">/dmenu</lable>
+                <form id="form">
+                    <input type="text" class="form-control" id="fild" placeholder="ВВЕДИТЕ ОТВЕТ" required><br>
+                    <button type="submit" class="submit-button">Подтвердить</button>
+                </form>
+            </div>
+        </div>
+        <section class="layers">
+            <div class="layers__container">
+                <div class="layers__item layer-1" style="background-image: url('./img/layer-1.png');"></div>
+                <div class="layers__item layer-2" style="background-image: url('./img/layer-2.png');"></div>
+                <div class="layers__item layer-3" style="background-image: url('./img/layer-3.png');"></div>
+                <div class="layers__item layer-4" style="background-image: url('./img/layer-4.png');"></div>
+                <div class="layers__item layer-5" style="background-image: url('./img/layer-5.png');"></div>
+            </div>
+        </section>
+        <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+        <script type="module" src="./quiz.js"></script>
+        <script type="module" src="./3d-efect.js"></script>
+    </body>
+</html>

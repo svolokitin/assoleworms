@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <link type="text/css" rel="stylesheet" href="./mainPage.css">
+    <link rel="icon" type="image/x-icon" href="./img/favicon.png">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Main page</title>
+</head>
+<body>
+    <div class="nav-bar">
+        <form id="form">
+            <ul>
+                <li style="display:hide"><a id="logout" href="">Выйти</a></li>
+                <li><a id="log" href="/auth/login">Войти</a></li>
+                <li><a id="reg" href="/auth/registration">Зарегистрироваться</a></li>
+                <li><a id="account" href="">Аккаунт</a></li>
+                <li style="float:left"><a href="/quiz/firstQuiz">Вопросы</a></li>  
+             </ul>
+        </form>
+    </div>
+    <div class="main-content">
+        <h1>Welcome to the Main Page</h1><br>
+    </div>
+    <div class="footer">
+        Site Footer
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script type="module" src="./main.js"></script>
+</body>
+</html>
